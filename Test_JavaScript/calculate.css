@@ -1,0 +1,81 @@
+
+
+.home a{
+  color:black;
+  text-decoration: none;
+}
+.home {
+  text-align: center;
+}
+.NameCal{
+  border: 1px black solid;
+  margin: 1px;
+  width : 170px;
+  height: 20px;
+  padding:2px;
+  margin:1px;
+  text-align: center;
+  background-color: lightgray;
+  color : green;
+}
+.main{
+  display: grid;
+  grid-template-columns: 40px 40px 40px 40px;
+  width : 174px;
+  border: 1px black solid;
+  margin : 1px;
+  grid-column-gap: 3px;
+  background-color: lightgray;
+
+  }
+.displays{
+  width : 165px;
+  height : 25px;
+  margin :  2px;
+  text-align: center;
+  font-size:20px;
+}
+.buttons{
+  width : 40px;
+  height : 30px;
+  padding:5px;
+  margin: 2px;
+  text-align: center;
+  }
+.buttons_cal{
+  width : 83px;
+  height : 30px;
+  padding:5px;
+  margin: 2px;
+  text-align: center;
+  }
+.sub1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  }
+.sub2 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  }
+.sub3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  }
+.sub4 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  }
+.sub5 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  }
+.sub6 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  }
+.sub21 {
+grid-row-start: 7;
+grid-row-end: 8;
+grid-column-start: 3;
+grid-column-end: 5;
+}

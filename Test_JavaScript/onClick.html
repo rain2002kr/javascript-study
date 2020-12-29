@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> onClickEvent </title>
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="onClick.css">
+    <script src="Greeting.js"> </script>
+
+  </head>
+
+  <body>
+  <div class="home"><script> Home(); </script></div>
+
+<form name="from">
+<div class="main">
+  <div id="sub1" class="box"><input name="box1" type=text></div>
+  <div id="sub2" class="box"><input name="box2" type=text></div>
+  <div id="sub3" class="buttons"><input type=button value="sum" onclick=process()></div>
+  <div id="sub4" class="box"><input name="sbox" type=text></div>
+</div>
+</form>
+
+<script>
+  function process(){
+    var value1 = eval(parseFloat(document.from.box1.value) +parseFloat(document.from.box2.value));
+        document.from.sbox.value = value1;
+  }
+
+
+</script>
+<style>
+  .sub1{
+    width:60px;
+  }
+</style>
+
+<!-- form type -->
+
+  <input class="sub1" type="button" onclick= "add('5000')" value="Nuddle">
+  <input class="sub1" type="button" onclick= "add('6000')" value="Meat">
+  <input class="sub1" type="button" onclick= "add('+')" value="+">
+  <br>
+  <input class="sub1" type="button" onclick= "sum()" value="=">
+  <br>
+
+  <input type="text" id="display"> : displays <br>
+  <input type="text" id="trg"> : add displays<br>
+  <input type="button" id="sss" value="event"> : event test
+
+<script>
+  function add(char){
+  var display = document.getElementById('display');
+  display.value = display.value + char;
+}
+function sum(char){
+  var display = document.getElementById('display');
+  var result = eval(display.value);
+  document.getElementById('trg').value = result;
+}
+
+</script>
+
+<script>
+  var t = document.getElementById('sss');
+
+   t.addEventListener('click', function(event){
+    alert('1');
+  });
+
+  t.addEventListener('click', function(event){
+   alert('<tr>ssss');
+ });
+
+
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript1-dom.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+   
+</head>
+<body>
+    <section id="section7">
+        <h1> Ex7 : 노드복제 및 템플릿  </h1>
+        <div>
+        <input class="title-input" name="title" />
+        <input type="button" class="clone-button" value="복제"/>
+        <input type="button" class="template-button" value="템플릿"/>
+        </div>
+        <template>
+            <tr>
+                <td></td>
+                <td class="subject"><a></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+       </template>
+        <table class="table-info">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성일</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="subject"><a href="1">자바스크립트란?</a></td>
+                    <td>2020-05-11</td>
+                    <td>이경훈</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="subject"><a href="2">잘해보고 싶다.....</a></td>
+                    <td>2020-05-12</td>
+                    <td>이경훈</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="subject"><a href="3">무엇을? 풀스택개발자...이걸로말이다...</a></td>
+                    <td>2020-05-13</td>
+                    <td>이경훈</td>
+                    <td>41</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="subject"><a href="4">언어를 많이 알아야 하는가? 그렇지...ㅎㅎ</a></td>
+                    <td>2020-05-22</td>
+                    <td>이경훈</td>
+                    <td>61</td>
+                </tr>
+            </tbody> 
+        </table>
+        
+    </section>
+    
+    <section id="section6-3">
+        <h1> Ex6-3 : 노드조작: 메뉴추가(InnerHTML)개선형  </h1>
+        <div>
+        <input class="title-input" name="title" />
+        <input type="button" class="add-button" value="추가"/>
+        <input type="button" class="del-button" value="삭제"/>
+        </div>
+        <ul class="menu-list">
+            <li><a href="">aaa </a></li>
+            <li><a href="">bbb </a></li>    
+        </ul>
+
+    </section>
+    <section id="section6-2">
+        <h1> Ex6-2 : 노드조작: 메뉴추가(InnerHTML)누적형  </h1>
+        <div>
+        <input class="title-input" name="title" />
+        <input type="button" class="add-button" value="추가"/>
+        <input type="button" class="del-button" value="삭제"/>
+        </div>
+        <ul class="menu-list">
+            <li><a href="">aaa </a></li>
+            <li><a href="">bbb </a></li>    
+        </ul>
+
+    </section>
+    <section id="section6-1">
+        <h1> Ex6-1 : 노드조작: 메뉴추가(createTextNode, createElement)  </h1>
+        <div>
+        <input class="title-input" name="title" />
+        <input type="button" class="add-button" value="추가"/>
+        <input type="button" class="del-button" value="삭제"/>
+        </div>
+        <ul class="menu-list">
+            <li><a href="">aaa </a></li>
+            <li><a href="">bbb </a></li>    
+        </ul>
+
+    </section>
+
+    <section id="section6">
+        <h1> Ex6 : 노드조작: 메뉴추가(createTextNode, Element)  </h1>
+        <div>
+        <input class="title-input" name="title" />
+        <input type="button" class="add-button" value="추가"/>
+        <input type="button" class="del-button" value="삭제"/>
+        </div>
+        <div class="menu-list">
+
+        </div>
+
+    </section>
+
+
+    <section id="section5">
+        <h1> Ex5 : 엘리먼트 노드의 속성 & CSS 속성 변경 하기  </h1>
+        <div>
+            <input class="src-input" list="img-list"/>
+            <datalist id="img-list">
+                <option value="img2.png">img2</option>
+                <option value="img3.png">img3</option>
+                <option value="img4.png">img4</option>
+            </datalist>
+
+            <select class="img-select">
+                <option value="img2.png">img2</option>
+                <option value="img3.png">img3</option>
+                <option value="img4.png">img4</option>
+
+            </select>
+            <input type="color"   class="color-input"/>
+
+
+            <input class="change-button" type="button" value="변경하기"/>
+            </div>
+        <div>          
+            <img class="img" src="images/img2.png" style="border: 1px solid red;"/>
+        </div>
+    </section>  
+    <section id="section4">
+        <h1> Ex4 : childNodes 를  이용한 노드 선택  </h1>
+        <div class="box">
+            <input/>
+            <input/>
+ 
+        </div>
+    </section>  
+    <section id="section3">
+        <h1> Ex3 : Selectors API Level1 </h1>
+        <div>
+           <input name="x" class="txt-x" type="text" value="0" dir="rtl"/>
+           +
+           <input name="y" class="txt-y" type="text" value="0" dir="rtl"/>
+           <input name="btn-add" class="btn-add" type="button" value="=" />
+           <input name="sum" class="txt-sum" type="text" value="0" readonly dir="rtl"/>
+  
+  
+        </div>
+    </section>  
+    <section id="section2">
+        <h1> Ex2 : 엘리먼트 선택 방법 개선하기</h1>
+        <div>
+           <input class="txt-x" type="text" value="0" dir="rtl"/>
+           +
+           <input class="txt-y" type="text" value="0" dir="rtl"/>
+           <input class="btn-add" type="button" value="=" />
+           <input class="txt-sum" type="text" value="0" readonly dir="rtl"/>
+  
+  
+        </div>
+    </section>  
+  <section>
+      <h1> Ex1 : 계산기 프로그램 </h1>
+      <div>
+         <input id="txt-x" type="text" value="0" dir="rtl"/>
+         +
+         <input id="txt-y" type="text" value="0" dir="rtl"/>
+         <input id="btn-add" type="button" value="=" />
+         <input id="txt-sum" type="text" value="0" readonly dir="rtl"/>
+
+
+      </div>
+  </section>
+    <hr />
+  
+</body>
+</html>

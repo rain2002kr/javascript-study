@@ -1,0 +1,14 @@
+.tableInfo{
+    border: 1px solid gray;
+}
+.tableInfo th{
+    border: 1px solid gray;
+    text-align: center;
+}
+.tableInfo tr, td{
+    border: 1px solid gray;
+    text-align: center;
+}
+td.subject{
+    text-align: left;
+}

@@ -1,0 +1,31 @@
+.main{
+  display:grid;
+  grid-template-columns: 100px 100px 100px;
+}
+#sub1{
+  grid-column-start:1;
+  grid-column-end:3;
+
+  display: inline;
+
+}
+#sub2{
+  grid-column-start:1;
+  grid-column-end:3;
+  display: inline;
+
+}
+#sub3{
+grid-column-start:1;
+grid-column-end:3;
+display: inline;
+}
+#sub4{
+grid-column-start:1;
+grid-column-end:3;
+display: inline;
+}
+
+.buttons input{
+width:173px;
+}

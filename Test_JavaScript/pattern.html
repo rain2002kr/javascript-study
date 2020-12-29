@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> </title>
+    <link rel="stylesheet" href="homestyle.css">
+    <script src="Greeting.js"> </script>
+
+  </head>
+  <body>
+    <div class='home'> <script> Home();</script> </div>
+
+  <script type="text/javascript">
+  var pattern = /a/;
+  var str ='abcdef'
+  //match and find value
+  document.write(pattern.exec('abc'));
+  document.write('<br>');
+  document.write(pattern.test('abc'));
+  document.write('<br>');
+  document.write(str.match(pattern)); //match and exec are  very similar.
+  document.write('<br>');
+  document.write(str.replace(pattern, 'A'));
+  document.write('<br>');
+  //exec option i and g
+  //i 를 붙이면 대소문자를 구분하지 않는다.
+  var xi = /A/;
+  var oi = /A/i; //대소문자 구분 안함.
+  var strs = 'abcd'
+  document.write('<br>');
+  document.write(strs.match(xi)); //match and exec are  very similar.
+  document.write('<br>');
+  document.write(strs.match(oi)); //match and exec are  very similar.
+  document.write('<br>');
+
+  var stra = 'AAabcdaa'
+  var xg = /a/g; //문자열 전부 찾는것
+  document.write(stra.match(xg)); //match and exec are  very similar.
+  document.write('<br>');
+
+  var xig = /a/ig; //문자열 전부 찾는것
+  document.write(stra.match(xig)); //match and exec are  very similar.
+  document.write('<br>');
+  //(\w+)\s(\w+) //w is 문자[A~Z,a~z,0~9], s is space
+  //문자열 체인지
+  var pat = /(\w+)\s(\w+)/;
+  var strb = "coding everybody"
+  document.write(strb);
+  document.write('<br>');
+  var stbr = strb.replace(pat, "$2 $1");
+  document.write(stbr);
+  //문자열 치환 url 체인지
+  var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+  var content = '생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. ';
+  var result = content.replace(urlPattern, function(url){
+    return '<a href="'+url+'">'+url+'</a>';
+  });
+  document.write('<br>');
+  document.write(result);
+  document.write('<br>');
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

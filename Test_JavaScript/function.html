@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> </title>
+    <link rel="stylesheet" href="homestyle.css">
+    <script src="Greeting.js"> </script>
+
+  </head>
+  <body>
+    <div class="home"><script> Home(); </script></div>
+
+<script>
+//function
+/*(function (){
+  var v = 5;
+  a();
+  b(v);
+    function a(){
+      var v=10;
+      for(var i=1; i<11; i++){
+      document.write("count : " +i+ " : " +v,"<br>");
+      }
+      b(v);
+
+    }
+    function b(v){
+      document.write(v,"<br>");
+    }
+})();*/
+//object
+//function module way using object
+
+/*(function (){
+  MYAPP = {}
+  MYAPP.calculate = {
+    'left' : null,
+    'right' : null
+  }
+  MYAPP.codinate = {
+    'left' : null,
+    'right' : null
+  }
+
+  MYAPP.calculate.left = 10;
+  MYAPP.calculate.right = 20;
+
+  function sum(){
+    return MYAPP.calculate.left + MYAPP.calculate.right;
+  }
+  document.write(sum());
+  document.write(MYAPP.calculate.left + MYAPP.calculate.right);
+})();*/
+
+//function return function
+/*
+function cal(mode){
+  var funcs = {
+    'plus': function(a,b){return a+b},
+    'minus': function(a,b){return a-b}
+    }
+  return funcs[mode];
+}
+
+document.write(cal('plus')(1,2),'<br>');
+document.write(cal('minus')(2,1),'<br>');
+
+//function in the array
+var process = [
+    function(input){ return input + 10;},
+    function(input){ return input * input;},
+    function(input){ return input / 2;}
+];
+var input = 1;
+for(var i = 0; i < process.length; i++){
+    input = process[i](input);
+}
+alert(input);
+*/
+/*
+//example 1
+o1 = {val1:1, val2:2, val3:3} //6
+o2 = {v1:10, v2:50, v3:100, v4:25} //185
+
+function sum(){
+  var _sum = 0;
+  for(name in this){
+    _sum = this[name] + _sum;
+  }
+  return _sum;
+}
+
+alert(sum.apply(o1));
+alert(sum.apply(o2));
+*/
+
+//example 2 인자값이 함수인지 아닌지 확인후 값쓰기
+// 객체 안에 함수값 지정하기
+eo1 = {val1:1, val2:2, val3:3, esum:esum} //6
+eo2 = {v1:10, v2:50, v3:100, v4:25, esum:esum} //185
+
+function esum(){
+  var _sum = 0;
+  for(name in this){
+    if(typeof this[name] !== 'function')
+    _sum += this[name];
+    }
+  return _sum;
+}
+
+alert(eo1.esum());
+alert(eo2.esum());
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+  </body>
+</html>

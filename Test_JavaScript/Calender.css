@@ -1,0 +1,17 @@
+.mains{
+ display: grid;
+ grid-template-columns: 40px 40px 40px 40px 40px 40px 40px;
+ border: 1px solid black;
+ width : 280px;
+}
+.name{
+ color:red;
+ border: 1px solid red;
+ text-align:center;
+}
+.sub0{
+ grid-column-start:1;
+ grid-column-end:8;
+ text-align:center;
+ border: 1px solid red;
+}

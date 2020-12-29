@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<!-- 주석 내용 -->
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript TestNote</title>
+  <link rel="stylesheet" href="calculate.css">
+  <link rel="stylesheet" href="homestyle.css">
+  <script src="Greeting.js"> </script>
+
+</head>
+  <div class='home'> <script> Home();</script> </div>
+
+<script> //<h1 class="home"><a href="index.html">Home</a></h1>
+</script>
+<body>
+  <div class="NameCal">Hoons Calculator</div>
+  <div class="main">
+      <div class="sub1" ><input type="text" class="displays" id="display"></div>
+      <div class="sub2" ><input type="text"  class="displays" id="result"></div>
+      <div class="sub3" ><input type="button" class="buttons" value="<-" onclick="back()"></div>
+      <div class="sub4"><input type="button"  class="buttons" value="CE" onclick="reset()"></div>
+      <div class="sub5"><input type="button" class="buttons" value="C" onclick="reset()"></div>
+      <div class="sub6"><input type="button" class="buttons" value="+" onclick="add('+')"></div>
+      <div class="sub7"><input type="button" class="buttons" value="7" onclick="add('7')"></div>
+      <div class="sub8"><input type="button" class="buttons" value="8" onclick="add('8')"></div>
+      <div class="sub9"><input type="button" class="buttons" value="9" onclick="add('9')"></div>
+      <div class="sub10"><input type="button" class="buttons" value="-" onclick="add('-')"></div>
+      <div class="sub11"><input type="button" class="buttons" value="4" onclick="add('4')"></div>
+      <div class="sub12"><input type="button" class="buttons" value="5" onclick="add('5')"></div>
+      <div class="sub13"><input type="button" class="buttons" value="6" onclick="add('6')"></div>
+      <div class="sub14"><input type="button" class="buttons" value="*" onclick="add('*')"></div>
+      <div class="sub15"><input type="button" class="buttons" value="1" onclick="add('1')"></div>
+      <div class="sub16"><input type="button" class="buttons" value="2" onclick="add('2')"></div>
+      <div class="sub17"><input type="button" class="buttons" value="3" onclick="add('3')"></div>
+      <div class="sub18"><input type="button" class="buttons" value="/" onclick="add('/')"></div>
+      <div class="sub19"><input type="button" class="buttons" value="0" onclick="add('0')"></div>
+      <div class="sub20"><input type="button" class="buttons" value="." onclick="add('.')"></div>
+      <div class="sub21"><input type="button" class="buttons_cal" value="calculate" onclick=calculate()></div>
+
+  </div>
+
+  <script>
+    function add(char) {
+      var display = document.getElementById('display'); // 우리가 식을 입력할 input 태그를 불러옵니다.
+      // display.value는 input 태그 안에 들어 있는 값을 의미합니다.
+      display.value = display.value + char;
+      // display.value += char; 로 쓸 수도 있습니다.
+      // input 태그의 값 뒤에 char 문자를 추가해 주는 역할을 합니다.
+    }
+    function back() {
+      var value = document.getElementById("display").value;
+      document.getElementById("display").value = value.substr(0, value.length - 1);
+    }
+    function calculate() {
+      var display = document.getElementById('display');
+      var result = eval(display.value); // 식을 계산하고 result 변수에 저장합니다.
+      document.getElementById('result').value = result;
+    }
+    function reset() {
+      document.getElementById('display').value = "";
+      document.getElementById('result').value = "";
+    }
+
+/*
+    var name = 'sss';
+    var x=1, y=1;
+    document.write(Date(),"<br>");
+    document.write(name,"<br>");
+    document.write(x+y,"<br>");
+    function message() {
+      document.write("test note <br> " );
+    }
+  var i=0;
+    for(i = 0; i < 4; i++)
+  {
+    message();
+  }
+*/
+
+  </script>
+
+
+</body>
+
+</html>

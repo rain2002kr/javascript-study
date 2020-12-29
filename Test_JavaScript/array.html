@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>array and object</title>
+    <script src="Greeting.js"> </script>
+    <link rel="stylesheet" href="homestyle.css">
+
+  </head>
+  <body>
+    <!-- start home -->
+    <div class='home'> <script> Home();</script> </div>
+  <!-- start script -->
+  <script>
+ //array execution
+  var HoonsFamilyName = ['이경훈' ,'최지선' ,'이은서', '이승유' ,'이신유'];
+  var HoonsFamilyAge = ['38' ,'38' ,'12', '10' ,'5'];
+  //for instruction
+  for(i = 0; i < HoonsFamilyName.length; i++)
+  {
+    document.write(HoonsFamilyName[i], ' : ');
+    document.write(HoonsFamilyAge[i]);
+    document.write('<br>');
+  }
+  document.write('<br>');
+  for (var key in HoonsFamilyName){
+    document.write(key+ " : " +HoonsFamilyName[key]+ HoonsFamilyAge[key]+ "<br>");
+  }
+ //Object execution
+ // for key in 사용
+ document.write('<br>');
+ var HoonsFamily = {'LKH' :38 , 'CJS':38 };
+ for(var keys in HoonsFamily){
+   document.write(keys+ "  "+HoonsFamily[keys]+"<br> "  );
+}
+
+//object making way : object is 'key' and 'value'. if there is no value, then
+//it is the error of sentence.
+document.write('<br>');
+var HoonsFailyOB = {
+  'name': {'이경훈':38 ,'최지선':38 ,'이은서':12, '이승유':10 ,'이신유':5 },
+  'show' : function() {
+    for (var key in this.name){
+      document.write(key+ " : " +this.name[key]+ "<br>");
+    }
+  }
+};
+HoonsFailyOB.show();
+
+
+
+
+
+
+  </script>
+
+
+
+
+  </body>
+</html>
